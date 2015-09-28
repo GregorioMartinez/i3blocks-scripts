@@ -15,5 +15,5 @@ MAILCOUNTER=`curl -u $USERID:$PASSWORD --silent "https://mail.google.com/mail/fe
 if [[ "$MAILCOUNTER" = "" ]]; then
     echo "ERROR"
 else
-    echo "&#xf0e0;  $MAILCOUNTER"
+    echo "&#xf0e0; $MAILCOUNTER"
 fi
