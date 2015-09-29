@@ -7,6 +7,11 @@
 
 IP=`dig +short myip.opendns.com @resolver1.opendns.com`
 
-VPN=`test -e /proc/sys/net/ipv4/conf/tun0 && echo $IP || echo "VPN Not Connected"`
+COLOR="F2777A"
+# VPN=`test -e  && echo $IP || echo "VPN Not Connected"`
 
-echo $VPN
+if test -e /proc/sys/net/ipv4/conf/tun0; then
+	COLOR="99CC99"
+fi
+
+echo "<span color=\"#$COLOR\">$IP</span>"
