@@ -13,7 +13,7 @@ esac
 
 MAILCOUNTER=`curl -u $USERID:$PASSWORD --silent "https://mail.google.com/mail/feed/atom" | xmllint --format --xpath "string(//*[name() = 'feed']/*[name() = 'fullcount'])" -`
 if [[ "$MAILCOUNTER" = "" ]]; then
-    echo "ERROR"
+    echo "<span color=\"#F2777A\">&#xf0e0; Error</span>"
 else
     echo "&#xf0e0; $MAILCOUNTER"
 fi
