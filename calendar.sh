@@ -5,6 +5,6 @@ case $BLOCK_BUTTON in
 		google-chrome http://calendar.google.com > /dev/null 2>&1
 esac
 
-DATE=`date '+%D %I:%M'`
+DATE=`date '+%A - %b %d %I:%M'`
 
-echo "&#xf073; $DATE"
+echo "&#xf073;   $DATE"
