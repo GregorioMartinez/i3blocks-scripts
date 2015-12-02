@@ -1,7 +1,9 @@
 #!/bin/bash
-#
+
 
 ROFI_TEXT="Power:"
+ROFI_OPTIONS=""
+
 enable_confirmation=true
 # Menu with keys/commands
 
@@ -19,6 +21,7 @@ menu=(
 )
 
 # Menu entries that may trigger a confirmation message
-menu_confirm="Shutdown Reboot Hibernate Suspend Halt Logout Cancel"
+menu_confirm="Shutdown Reboot Hibernate Suspend Halt Logout"
 
-source ./menu-maker.sh
+
+source /home/greg/scripts/i3block-scripts/menu-maker.sh
