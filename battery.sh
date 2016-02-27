@@ -4,9 +4,18 @@
 # acpi
 # grep
 # tr
+# paste
+# bc
 
-BAT=`acpi -b`
-LEVEL=`echo $BAT | grep -Eo [0-9]+\% | tr -d '%'`
+BAT=$(acpi -b)
+
+# Get all battery levels
+# Condense to one line and sum
+SUM=$(echo $BAT | grep -Eo [0-9]+\% | tr -d '%' | paste -sd+ - | bc)
+
+# Divide sum by number of batteries to get average battery level
+LEVEL=$(echo $SUM / $(acpi -b | grep -Eoc [0-9]+\% ) | bc)
+
 ISCHARGING=`echo $BAT | grep -Eo Charging`
 
 ICON="f244"
