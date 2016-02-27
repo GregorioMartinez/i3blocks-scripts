@@ -2,10 +2,9 @@
 
 # Dependecies
 # test
-# dig
-# OpenDNS servers
+# wget
 
-IP=`dig +short myip.opendns.com @resolver1.opendns.com`
+IP=$(wget http://ipinfo.io/ip --quiet --output-document=-)
 
 COLOR="F2777A"
 
