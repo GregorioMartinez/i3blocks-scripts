@@ -1,8 +1,8 @@
 #!/bin/bash
 
-VOL=`amixer get Master`
-LEVEL=`echo $VOL | grep -Eo '[0-9]{1,3}?%'`
-IS_MUTE=`echo $VOL | grep -Eo '\[on\]'`
+VOL=$(amixer -D pulse get Master)
+LEVEL=$(echo ${VOL} | grep -Eo '[0-9]{1,3}?%' | head -n 1)
+IS_MUTE=$(echo ${VOL} | grep -Eo '\[on\]' | head -n 1)
 COLOR="EBDBB2"
 ICON="f028"
 
