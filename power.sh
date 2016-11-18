@@ -24,4 +24,4 @@ menu=(
 menu_confirm="Shutdown Reboot Hibernate Suspend Halt Logout"
 
 
-source /home/greg/scripts/i3block-scripts/menu-maker.sh
+source /home/greg/code/scripts/i3block-scripts/menu-maker.sh
