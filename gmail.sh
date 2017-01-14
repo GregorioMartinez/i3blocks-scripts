@@ -4,7 +4,7 @@
 # curl
 # xmllint
 
-source /home/greg/code/scripts/i3block-scripts/gmail.conf
+source $HOME/code/i3block-scripts/gmail.conf
 
 case $BLOCK_BUTTON in
 	1)
