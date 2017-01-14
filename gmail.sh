@@ -8,7 +8,7 @@ source $HOME/code/i3block-scripts/gmail.conf
 
 case $BLOCK_BUTTON in
 	1)
-		google-chrome http://gmail.com > /dev/null 2>&1
+		sensible-browser http://gmail.com > /dev/null 2>&1
 esac
 
 MAILCOUNTER=`curl -u $USERID:$PASSWORD --silent "https://mail.google.com/mail/feed/atom" | xmllint --format --xpath "string(//*[name() = 'feed']/*[name() = 'fullcount'])" -`
